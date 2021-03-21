@@ -45,13 +45,13 @@ import javax.swing.border.EmptyBorder;
 							+ "the order in the images bellow:<br><br>"
 							+ "After naming all the opponents, and leaving yourself blank, just click the opponent you fight each"
 							+ " round, and the app will keep track of your possible next opponents, red squares are your possible opponents. <br><br>"
-							+ "When a player is eliminated, click the ''eliminate'' button and eliminate that player, the algorithm will reset, and"
+							+ "When a player is eliminated, click the ''eliminate'' button and eliminate that player, the algorithm will reset, and "
 							+ "you can keep using the tracker the same way."
 					+ "</body></html>");
 			label.setFont(new Font("Arial", Font.BOLD, 22));
 			label.setVerticalTextPosition(JLabel.NORTH);
 			label.setHorizontalTextPosition(JLabel.CENTER);
-			label.setForeground(Color.black);
+			label.setForeground(Color.white);
 			label.setFocusable(false);
 
 			startButton = new JButton();
@@ -73,7 +73,7 @@ import javax.swing.border.EmptyBorder;
 			exitButton.setFocusable(false);
 
 			this.setContentPane(new JLabel(new ImageIcon(getClass().getClassLoader().getResource("background.jpg"))));
-			this.setBackground(new Color(100, 65, 165));
+			this.setBackground(Color.black);
 			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			this.setLayout(null);
 			ImageIcon icon = new ImageIcon(StartFrame.class.getResource("icon.png"));
