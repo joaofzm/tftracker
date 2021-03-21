@@ -39,6 +39,19 @@ public class Buttons implements ActionListener {
 	ArrayList<Integer> player7Counter = new ArrayList<Integer>();
 	ArrayList<Integer> player8Counter = new ArrayList<Integer>();
 	
+	void resetGame() {
+		player1Alive = true;
+		player2Alive = true;
+		player3Alive = true;
+		player4Alive = true;
+		player5Alive = true;
+		player6Alive = true;
+		player7Alive = true;
+		player8Alive = true;
+		playersAlive = 8;
+		userFound = false;
+	}
+
 	void killPlayer1() {
 		player1Alive = false;
 		playersAlive--;
@@ -112,6 +125,14 @@ public class Buttons implements ActionListener {
 	}
 
 	void resetCounters() {
+		player1Counter.clear();
+		player2Counter.clear();
+		player3Counter.clear();
+		player4Counter.clear();
+		player5Counter.clear();
+		player6Counter.clear();
+		player7Counter.clear();
+		player8Counter.clear();
 		player1Counter.add(6);
 		player2Counter.add(6);
 		player3Counter.add(6);
@@ -462,7 +483,6 @@ public class Buttons implements ActionListener {
 	public static JButton player8Button = new JButton();
 
 	public Buttons() {
-
 		resetCounters();
 
 		startGame = new JButton();
@@ -471,8 +491,8 @@ public class Buttons implements ActionListener {
 		startGame.setText("START GAME");
 		startGame.setFont(new Font("Comic sans", Font.BOLD, 22));
 		startGame.setForeground(Color.white);
-		startGame.setFocusable(true);
 		startGame.setBackground(new Color(0x1E710E));
+		startGame.setFocusable(true);
 		startGame.setVisible(true);
 
 		rename = new JButton();
@@ -586,7 +606,6 @@ public class Buttons implements ActionListener {
 		player8Button.setBackground(new Color(96, 9, 9));
 		player8Button.setFocusable(true);
 		player8Button.setVisible(false);
-		
 	}
 
 	@Override
@@ -887,8 +906,13 @@ public class Buttons implements ActionListener {
 		}
 
 		if (e.getSource() == returnToMenu) {
-			StartFrame.gui.dispose();
-			new StartFrame();
+			int action = JOptionPane.showConfirmDialog(null, "Return to main menu?", "RETURN TO MAIN MENU",
+					JOptionPane.YES_NO_OPTION);
+			if (action == 0) {
+				resetGame();
+				StartFrame.gui.dispose();
+				new StartFrame();
+			}
 		}
 	}
 }
