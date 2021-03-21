@@ -476,7 +476,7 @@ public class Buttons implements ActionListener {
 		startGame.setVisible(true);
 
 		rename = new JButton();
-		rename.setBounds(325, 325, 250, 50);
+		rename.setBounds(325, 313, 250, 50);
 		rename.addActionListener(this);
 		rename.setText("RENAME");
 		rename.setFont(new Font("Comic sans", Font.BOLD, 22));
@@ -486,7 +486,7 @@ public class Buttons implements ActionListener {
 		rename.setVisible(false);
 
 		undo = new JButton();
-		undo.setBounds(325, 395, 250, 50);
+		undo.setBounds(325, 388, 250, 50);
 		undo.addActionListener(this);
 		undo.setText("UNDO");
 		undo.setFont(new Font("Comic sans", Font.BOLD, 22));
@@ -496,7 +496,7 @@ public class Buttons implements ActionListener {
 		undo.setVisible(false);
 
 		eliminate = new JButton();
-		eliminate.setBounds(325, 465, 250, 50);
+		eliminate.setBounds(325, 462, 250, 50);
 		eliminate.addActionListener(this);
 		eliminate.setText("ELIMINATE");
 		eliminate.setFont(new Font("Comic sans", Font.BOLD, 22));
@@ -506,7 +506,7 @@ public class Buttons implements ActionListener {
 		eliminate.setVisible(false);
 
 		returnToMenu = new JButton();
-		returnToMenu.setBounds(325, 535, 250, 50);
+		returnToMenu.setBounds(325, 537, 250, 50);
 		returnToMenu.addActionListener(this);
 		returnToMenu.setText("RETURN TO MENU");
 		returnToMenu.setFont(new Font("Comic sans", Font.BOLD, 22));
@@ -741,7 +741,6 @@ public class Buttons implements ActionListener {
 		}
 
 		if (e.getSource() == undo) {
-			/*
 			player1Counter.remove(player1Counter.get(player1Counter.size() - 1));
 			player2Counter.remove(player2Counter.get(player2Counter.size() - 1));
 			player3Counter.remove(player3Counter.get(player3Counter.size() - 1));
@@ -750,6 +749,7 @@ public class Buttons implements ActionListener {
 			player6Counter.remove(player6Counter.get(player6Counter.size() - 1));
 			player7Counter.remove(player7Counter.get(player7Counter.size() - 1));
 			player8Counter.remove(player8Counter.get(player8Counter.size() - 1));
+			System.out.println(player1Counter);
 			if (playersAlive == 8) {
 				paintSquaresIf8PlayersAlive();
 			} else if (playersAlive == 7) {
@@ -759,7 +759,6 @@ public class Buttons implements ActionListener {
 			} else if (playersAlive == 5 || playersAlive == 4) {
 				paintSquaresIf5or4PlayersAlive();
 			}
-			*/
 		}
 
 		if (e.getSource() == eliminate) {
