@@ -1,15 +1,13 @@
 package tftracker;
 
 import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Gui extends JFrame implements ActionListener {
+public class Gui extends JFrame {
 
 	JButton player1Button;
 	JButton player2Button;
@@ -37,9 +35,7 @@ public class Gui extends JFrame implements ActionListener {
 		this.setMinimumSize(new Dimension(900, 900));
 		this.pack();
 
-
 		Buttons buttons = new Buttons();
-
 		this.add(buttons.player1Button);
 		this.add(buttons.player2Button);
 		this.add(buttons.player3Button);
@@ -55,7 +51,6 @@ public class Gui extends JFrame implements ActionListener {
 		this.add(buttons.returnToMenu);
 
 		TextFields textFields = new TextFields();
-
 		this.add(textFields.player1TextField);
 		this.add(textFields.player2TextField);
 		this.add(textFields.player3TextField);
@@ -68,12 +63,6 @@ public class Gui extends JFrame implements ActionListener {
 
 
 		this.setVisible(true);
-
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-
 
 	}
 
