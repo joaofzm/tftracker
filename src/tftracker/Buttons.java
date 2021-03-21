@@ -741,23 +741,24 @@ public class Buttons implements ActionListener {
 		}
 
 		if (e.getSource() == undo) {
-			player1Counter.remove(player1Counter.get(player1Counter.size() - 1));
-			player2Counter.remove(player2Counter.get(player2Counter.size() - 1));
-			player3Counter.remove(player3Counter.get(player3Counter.size() - 1));
-			player4Counter.remove(player4Counter.get(player4Counter.size() - 1));
-			player5Counter.remove(player5Counter.get(player5Counter.size() - 1));
-			player6Counter.remove(player6Counter.get(player6Counter.size() - 1));
-			player7Counter.remove(player7Counter.get(player7Counter.size() - 1));
-			player8Counter.remove(player8Counter.get(player8Counter.size() - 1));
-			System.out.println(player1Counter);
-			if (playersAlive == 8) {
-				paintSquaresIf8PlayersAlive();
-			} else if (playersAlive == 7) {
-				paintSquaresIf7PlayersAlive();
-			} else if (playersAlive == 6) {
-				paintSquaresIf6PlayersAlive();
-			} else if (playersAlive == 5 || playersAlive == 4) {
-				paintSquaresIf5or4PlayersAlive();
+			if (player1Counter.size() > 1) {
+				player1Counter.remove(player1Counter.size() - 1);
+				player2Counter.remove(player2Counter.size() - 1);
+				player3Counter.remove(player3Counter.size() - 1);
+				player4Counter.remove(player4Counter.size() - 1);
+				player5Counter.remove(player5Counter.size() - 1);
+				player6Counter.remove(player6Counter.size() - 1);
+				player7Counter.remove(player7Counter.size() - 1);
+				player8Counter.remove(player8Counter.size() - 1);
+				if (playersAlive == 8) {
+					paintSquaresIf8PlayersAlive();
+				} else if (playersAlive == 7) {
+					paintSquaresIf7PlayersAlive();
+				} else if (playersAlive == 6) {
+					paintSquaresIf6PlayersAlive();
+				} else if (playersAlive == 5 || playersAlive == 4) {
+					paintSquaresIf5or4PlayersAlive();
+				}
 			}
 		}
 
