@@ -1,6 +1,5 @@
 package tftracker;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,8 +26,7 @@ public class Gui extends JFrame implements ActionListener {
 
 	public Gui() {
 
-		this.setContentPane(new JLabel(new ImageIcon(getClass().getClassLoader().getResource(""))));
-		this.setBackground(Color.black);
+		this.setContentPane(new JLabel(new ImageIcon(getClass().getClassLoader().getResource("background.jpg"))));
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLayout(null);
 		ImageIcon icon = new ImageIcon(Gui.class.getResource("icon.png"));
